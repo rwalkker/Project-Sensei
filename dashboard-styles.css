@@ -282,7 +282,7 @@ body::before {
 
 .rank-card {
     display: grid;
-    grid-template-columns: 35px 1fr 70px 70px 40px;
+    grid-template-columns: 35px 1fr 100px 40px;
     align-items: center;
     padding: 5px 8px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 20, 0.7) 100%);
@@ -379,14 +379,17 @@ body::before {
 
 .rank-stats {
     display: flex;
-    flex-direction: column;
-    gap: 1px;
+    flex-direction: row;
+    gap: 8px;
     font-size: 8pt;
+    align-items: center;
 }
 
 .stat-row {
     display: flex;
-    justify-content: space-between;
+    gap: 3px;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .stat-label {

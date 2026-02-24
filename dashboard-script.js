@@ -52,17 +52,16 @@ function renderLeaderboard() {
         card.innerHTML = `
             <div class="rank-number">${rank <= 3 ? ['🥇', '🥈', '🥉'][rank - 1] : '#' + rank}</div>
             <div class="rank-info">
-                <div class="rank-name">${participant.name}</div>
+                <div class="rank-name">${participant.emoji} ${participant.name}</div>
                 <div class="rank-path">${participant.path} • ${beltNames[participant.belt]} Belt • ${participant.hours}h</div>
             </div>
-            <div class="rank-belt">${participant.emoji}</div>
             <div class="rank-stats">
                 <div class="stat-row">
                     <span class="stat-label">UPH:</span>
                     <span class="stat-value">${participant.uph}</span>
                 </div>
                 <div class="stat-row">
-                    <span class="stat-label">Quality:</span>
+                    <span class="stat-label">Q:</span>
                     <span class="stat-value">${participant.quality}%</span>
                 </div>
             </div>
