@@ -49,8 +49,6 @@ function renderLeaderboard() {
         card.className = `rank-card ${rank <= 3 ? 'top-3 rank-' + rank : ''}`;
         card.style.animationDelay = (index * 0.1) + 's';
         
-        const progressDeg = (participant.progress / 100) * 360;
-        
         card.innerHTML = `
             <div class="rank-number">${rank <= 3 ? ['🥇', '🥈', '🥉'][rank - 1] : '#' + rank}</div>
             <div class="rank-info">
@@ -69,9 +67,8 @@ function renderLeaderboard() {
                 </div>
             </div>
             <div class="rank-progress">
-                <div class="progress-circle" style="--progress: ${progressDeg}deg">
-                    ${participant.progress}%
-                </div>
+                <div class="progress-indicator" style="--progress: ${participant.progress}%"></div>
+                <span class="progress-text">${participant.progress}%</span>
             </div>
         `;
         

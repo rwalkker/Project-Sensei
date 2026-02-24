@@ -282,7 +282,7 @@ body::before {
 
 .rank-card {
     display: grid;
-    grid-template-columns: 35px 1fr 70px 70px 55px;
+    grid-template-columns: 35px 1fr 70px 70px 40px;
     align-items: center;
     padding: 5px 8px;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(20, 20, 20, 0.7) 100%);
@@ -399,29 +399,24 @@ body::before {
 
 .rank-progress {
     text-align: center;
-}
-
-.progress-circle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: conic-gradient(#4ecdc4 0deg, #4ecdc4 var(--progress), rgba(255, 255, 255, 0.1) var(--progress));
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 9px;
-    font-weight: bold;
-    position: relative;
+    gap: 3px;
 }
 
-.progress-circle::before {
-    content: '';
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: rgba(26, 26, 46, 0.9);
-    border-radius: 50%;
-    z-index: -1;
+.progress-indicator {
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(to top, #4ecdc4 var(--progress), rgba(255, 255, 255, 0.2) var(--progress));
+    border-radius: 2px;
+    border: 1px solid rgba(78, 205, 196, 0.5);
+}
+
+.progress-text {
+    font-size: 9px;
+    font-weight: bold;
+    color: #4ecdc4;
 }
 
 /* Stats Grid */
