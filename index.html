@@ -37,6 +37,15 @@
             overflow-y: auto;
         }
         
+        .slide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .slide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
         .slide.active { display: block; animation: fadeIn 0.5s; }
         
         @keyframes fadeIn {
@@ -180,7 +189,6 @@
     <div class="presentation">
         <!-- Slide 1 -->
         <div class="slide active">
-            <h1>🥷 SENSEI 🥷</h1>
             <img src="assets/sensei-hero.png" class="hero-img" alt="SENSEI">
         </div>
 
