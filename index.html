@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSEI - The Kaizen Belt Leadership Development Program</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow: hidden;
+            height: 100vh;
+        }
+        
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        
+        .slide {
+            display: none;
+            max-width: 1400px;
+            width: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(20, 20, 20, 0.95));
+            border: 3px solid rgba(255, 215, 0, 0.4);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 50px rgba(255, 140, 0, 0.3);
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
+        }
+        
+        .slide.active { display: block; animation: fadeIn 0.5s; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            font-size: 72px;
+            text-align: center;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            font-size: 42px;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            font-size: 24px;
+            color: #FFA500;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .belt-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 48px;
+            margin: 30px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        th {
+            background: rgba(255, 215, 0, 0.2);
+            color: #FFD700;
+        }
+        
+        ul {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 30px;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        button {
+            background: linear-gradient(135deg, #FF8C00, #FFD700);
+            color: #000;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        button:hover { transform: scale(1.05); }
+        button:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .counter { color: #FFD700; font-size: 18px; font-weight: bold; }
+        
+        .hero-img {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 15px;
+            border: 3px solid rgba(255, 215, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <h1>🥷 SENSEI 🥷</h1>
+            <div class="subtitle">The Kaizen Belt Leadership Development Program</div>
+            <div class="subtitle" style="font-size: 18px;">Sustaining Excellence through Networked Skills, Education & Impact</div>
+            <div class="subtitle" style="font-size: 20px; margin-top: 20px;">PHX6 | CRET Operations | L3 & L4 Leaders</div>
+            <img src="assets/sensei-hero.jpg" class="hero-img" alt="SENSEI">
+            <div class="belt-row">
+                <span>⬜</span><span>🟨</span><span>🟧</span><span>🟩</span>
+                <span>🟦</span><span>🟪</span><span>🟫</span><span>⬛</span>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h2>What Is SENSEI?</h2>
+            <div class="content">
+                <p style="text-align: center; font-size: 20px; margin: 20px 0;"><strong>A performance-based belt progression system built for CRET leaders.</strong></p>
+                <p style="text-align: center; margin: 20px 0;">SENSEI rewards what actually matters — not how long you've been here, but how well you perform, how deeply you understand the operation, and how many leaders you develop along the way.</p>
+                
+                <h3 style="color: #FFD700; margin-top: 30px;">Three Core Principles:</h3>
+                <ul>
+                    <li><strong>⚖️ Pure Meritocracy</strong> — Advance based on what you achieve, not your tenure</li>
+                    <li><strong>📊 Data-Driven</strong> — All criteria pulled from live operational systems — objective and transparent</li>
+                    <li><strong>🤝 Mentorship-Driven</strong> — Higher belts require developing other leaders with measurable impact</li>
+                </ul>
+            </div>
+            <div class="belt-row">
+                <span>⬜</span><span>🟨</span><span>🟧</span><span>🟩</span>
+                <span>🟦</span><span>🟪</span><span>🟫</span><span>⬛</span>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h2>Who Can Participate?</h2>
+            <div class="content">
+                <p style="background: rgba(50, 205, 50, 0.1); padding: 20px; border-radius: 10px; border: 2px solid rgba(50, 205, 50, 0.5); margin: 20px 0;">
+                    <strong style="color: #32CD32;">✅ Eligible:</strong> All Process Assistants (L3) and Area Managers (L4+) actively processing in CRET or AR/WHD paths at PHX6.
+                </p>
+                
+                <h3 style="color: #32CD32;">✅ What Counts Toward Your Hours</h3>
+                <ul>
+                    <li>Direct processing time in CRET and AR/WHD paths only</li>
+                    <li>Hours accumulate from your very first qualifying shift</li>
+                    <li>30-day inactivity rule: if you leave path for 30 consecutive days, your hour clock pauses</li>
+                </ul>
+                
+                <h3 style="color: #FF6347;">❌ What Does NOT Count</h3>
+                <ul>
+                    <li>Indirect support hours</li>
+                    <li>Administrative time</li>
+                    <li>Time in non-CRET process paths</li>
+                </ul>
+                
+                <p style="text-align: center; font-size: 28px; color: #FFD700; margin-top: 30px; font-weight: bold;">🚀 Your hours start NOW</p>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <h2>The Belt Progression Overview</h2>
+            <div class="subtitle">8 Levels. 250 Hours. One Standard.</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Belt</th>
+                        <th>Hours</th>
+                        <th>UPH Target</th>
+                        <th>Quality Yield</th>
+                        <th>Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>⬜ White</td><td>10 hrs</td><td>≥ 37.16</td><td>≥ 92%</td><td>Performance</td></tr>
+                    <tr><td>🟨 Yellow</td><td>40 hrs</td><td>≥ 42.73</td><td>≥ 94%</td><td>Performance</td></tr>
+                    <tr><td>🟧 Orange</td><td>70 hrs</td><td>≥ 44.59</td><td>≥ 95%</td><td>Performance + Intro Knowledge</td></tr>
+                    <tr><td>🟩 Green</td><td>100 hrs</td><td>≥ 46.45</td><td>≥ 95%</td><td>Knowledge Gate 1</td></tr>
+                    <tr><td>🟦 Blue</td><td>140 hrs</td><td>≥ 46.45</td><td>≥ 96%</td><td>Site TPH Fundamentals</td></tr>
+                    <tr><td>🟪 Purple</td><td>180 hrs</td><td>≥ 48.31</td><td>≥ 96%</td><td>Department TPH Mastery</td></tr>
+                    <tr><td>🟫 Brown</td><td>220 hrs</td><td>≥ 50.17</td><td>≥ 97%</td><td>End-to-End TPH Mastery</td></tr>
+                    <tr><td>⬛ Black</td><td>250 hrs</td><td>≥ 50.17+</td><td>≥ 98%</td><td>TPH Optimization Strategist</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <h2>Performance Levels: White, Yellow, Orange</h2>
+            <div class="subtitle">The On-Ramp. Approachable. Earned.</div>
+            <div class="content">
+                <p style="text-align: center; margin: 20px 0;">These three levels are about one thing: <strong>showing up and performing</strong>. No knowledge tests. No projects. Just consistent, high-quality processing that proves you belong at the next level.</p>
+                
+                <h3 style="color: #fff;">⬜ White Belt (10 hrs)</h3>
+                <p>Hit LP Standard. Zero incidents. That's it. Your first Peccy pin is closer than you think.</p>
+                
+                <h3 style="color: #FFD700;">🟨 Yellow Belt (40 hrs)</h3>
+                <p>15% above standard, sustained. Prove it wasn't a fluke.</p>
+                
+                <h3 style="color: #FF8C00;">🟧 Orange Belt (70 hrs)</h3>
+                <p>20% above standard. Lead one safety talk. You're starting to understand <em>why</em> the process works, not just <em>how</em> to run it.</p>
+            </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <h2>Knowledge Levels: Green and Blue</h2>
+            <div class="subtitle">The Knowledge Gate Opens at Green.</div>
+            <div class="content">
+                <h3 style="color: #32CD32;">🟩 Green Belt (100 hrs)</h3>
+                <p>The first real milestone. 100 hours of qualifying performance in a demanding environment is genuinely earned.</p>
+                <ul>
+                    <li>Pass the cumulative knowledge assessment (CRET process paths, defect ID, quality yield drivers, basic TPH)</li>
+                    <li>Deliver one structured OJT session to a developing leader with a documented, measurable outcome</li>
+                    <li><strong>Passing score: 80%</strong></li>
+                </ul>
+                
+                <h3 style="color: #1E90FF;">🟦 Blue Belt (140 hrs)</h3>
+                <p>You are not just performing - you are owning quality outcomes.</p>
+                <ul>
+                    <li>Pass the advanced assessment (adds site TPH fundamentals, throughput levers, backlog management)</li>
+                    <li>Lead one quality improvement project - minimum 1% yield improvement or equivalent documented impact</li>
+                    <li>Begin formal mentorship of at least one leader below Green Belt</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+            <h2>Leadership Levels: Purple and Brown</h2>
+            <div class="subtitle">Your Impact Is Measured by the Performance of Others.</div>
+            <div class="content">
+                <h3 style="color: #9370DB;">🟪 Purple Belt (180 hrs)</h3>
+                <p>You understand the full CRET flow. Now you are building the next generation.</p>
+                <ul>
+                    <li>Pass the TPH deep dive assessment (adds AR/WHD integration, VRET impact, peak/non-peak planning)</li>
+                    <li>Design and deliver a SENSEI training module - reviewed and approved by Sr. Ops</li>
+                    <li>Formally mentor 2+ leaders; at least 1 must advance a belt level under your guidance</li>
+                </ul>
+                
+                <h3 style="color: #D2691E;">🟫 Brown Belt (220 hrs)</h3>
+                <p>You are shaping the site's CRET performance culture.</p>
+                <ul>
+                    <li>Pass the capstone assessment (adds end-to-end TPH mastery, bottoms-up planning, cross-functional dependencies)</li>
+                    <li>Lead a cross-functional improvement project (2+ departments) with documented business impact</li>
+                    <li>Recognized mentor with a track record of multiple belt-level advancements</li>
+                    <li><strong>Eligible to administer SENSEI assessments</strong> - in person or virtually, including cross-site</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide">
+            <h2>The Standard: Black Belt</h2>
+            <div class="subtitle">You Are the Standard.</div>
+            <div class="content">
+                <p style="text-align: center; font-size: 20px; margin: 20px 0;"><strong>⬛ The Black Belt is not a destination. It is a commitment to sustaining and elevating excellence indefinitely.</strong></p>
+                
+                <h3 style="color: #FFD700;">To earn Black Belt, you must:</h3>
+                <ul>
+                    <li>Sustain ≥ 50.17 UPH and ≥ 98% quality yield over 120 consecutive days</li>
+                    <li>Architect and implement a site-wide initiative with measurable CRET performance impact</li>
+                    <li>Develop at least one leader to Purple Belt or above</li>
+                    <li>Deliver a <strong>live TPH Optimization Strategy Presentation</strong> to Sr. Ops or above - 15-20 minutes, with data, proposed solution, and success metrics</li>
+                </ul>
+                
+                <p style="background: rgba(255, 215, 0, 0.2); padding: 20px; border-radius: 10px; border: 2px solid #FFD700; margin-top: 30px; text-align: center;">
+                    <strong>The first Black Belt at PHX6 will design their own Peccy pin</strong> - a permanent symbol of what it means to reach the highest standard this program recognizes.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide">
+            <h2>The Assessments</h2>
+            <div class="subtitle">Cumulative. Rigorous. Fair.</div>
+            <p style="text-align: center; margin: 20px 0;">Every assessment builds on all prior levels - no shortcuts, no gaps.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Belt</th>
+                        <th>Format</th>
+                        <th>Passing Score</th>
+                        <th>New Content Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>🟩 Green</td><td>Written/Practical</td><td>80%</td><td>CRET process, defect ID, quality yield, basic TPH</td></tr>
+                    <tr><td>🟦 Blue</td><td>Written</td><td>80%</td><td>Site TPH, throughput levers, backlog, production reports</td></tr>
+                    <tr><td>🟪 Purple</td><td>Written</td><td>80%</td><td>Dept TPH, AR/WHD integration, VRET, peak planning</td></tr>
+                    <tr><td>🟫 Brown</td><td>Written Capstone</td><td>85%</td><td>End-to-end flow, bottoms-up planning, root cause analysis</td></tr>
+                    <tr><td>⬛ Black</td><td>Live Presentation</td><td>Evaluator Consensus</td><td>TPH optimization strategy - data, solution, metrics</td></tr>
+                </tbody>
+            </table>
+            
+            <h3 style="color: #FFD700; margin-top: 30px;">Assessment Ownership - Phased Rollout:</h3>
+            <ul>
+                <li><strong>Phase 1 (Months 1-6):</strong> Program Owner + Learning Ops</li>
+                <li><strong>Phase 2 (Months 7-12):</strong> Brown Belt graduates added as co-administrators</li>
+                <li><strong>Phase 3 (Month 13+):</strong> Black Belt leaders own delivery; cross-site virtual eligible</li>
+            </ul>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide">
+            <h2>Mentorship Framework</h2>
+            <div class="subtitle">Higher Belts Are Earned by Developing Others.</div>
+            <div class="content">
+                <p style="text-align: center; margin: 20px 0;"><strong>Mentorship is not optional at Blue Belt and above - it is a core advancement criterion.</strong></p>
+                
+                <h3 style="color: #FFD700;">What mentorship looks like in SENSEI:</h3>
+                <ul>
+                    <li>Structured check-ins (weekly or bi-weekly)</li>
+                    <li>Documented OJT sessions with measurable outcomes</li>
+                    <li>Mid-cycle progress reviews tied to belt criteria</li>
+                    <li>Advancement verification co-signed by mentor and manager</li>
+                </ul>
+                
+                <p style="margin: 20px 0;">Mentorship documentation is tracked in the SENSEI Mentorship Template - submitted to the Program Owner upon mentee advancement.</p>
+                
+                <p style="background: rgba(255, 215, 0, 0.2); padding: 20px; border-radius: 10px; border: 2px solid #FFD700; margin-top: 20px;">
+                    <strong>The multiplier effect:</strong> A Black Belt who develops one Purple Belt, who develops two Blue Belts, who each develop two Green Belts - that is one leader creating a performance culture that touches 7+ developing leaders simultaneously.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="slide">
+            <h2>VRET Integration</h2>
+            <div class="subtitle">VRET Knowledge Is Part of the Mastery Path.</div>
+            <p style="text-align: center; margin: 20px 0;">Vendor Return to Vendor (VRET) processing is integrated into the SENSEI knowledge framework at Green Belt and above.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Belt</th>
+                        <th>VRET Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>White-Orange</td><td>VRET hours count toward process hours; no specific knowledge required</td></tr>
+                    <tr><td>Green</td><td>VRET basics included in knowledge assessment (disposition rules, routing logic)</td></tr>
+                    <tr><td>Blue</td><td>Quality improvement project may be VRET-focused (misroutes, yield, dwell)</td></tr>
+                    <tr><td>Purple</td><td>VRET throughput planning included in end-to-end CRET flow mastery assessment</td></tr>
+                    <tr><td>Brown-Black</td><td>VRET is a component of cross-functional TPH analysis and optimization strategy</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="slide">
+            <h2>Tracking and Visibility</h2>
+            <div class="subtitle">You Always Know Where You Stand.</div>
+            <div class="content">
+                <h3 style="color: #FFD700;">📺 SENSEI Scoreboard (Cube TV)</h3>
+                <ul>
+                    <li>Live leaderboard: top leaders by belt level and hours toward next belt</li>
+                    <li>"Closest to Advancement" spotlight - who is within 10 hours of their next belt?</li>
+                    <li>Recent advancements feed - real-time recognition</li>
+                    <li>SENSEI Tip of the Day - rotating quality and TPH insights</li>
+                    <li>Site stats: total SENSEI hours logged, average UPH of participants vs. non-participants</li>
+                </ul>
+                
+                <h3 style="color: #FFD700; margin-top: 30px;">💬 Slack + SharePoint Tracking</h3>
+                <ul>
+                    <li>Leaders log qualifying shifts via SharePoint form</li>
+                    <li>Automated Slack notification to #phx6-sensei when a new entry is submitted or a belt threshold is hit</li>
+                    <li>Manager verification confirms shift data against system records before hours count</li>
+                    <li>Master tracker lives in SharePoint - visible to all eligible leaders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="slide">
+            <h2>Recognition</h2>
+            <div class="subtitle">The Pin Is the Story.</div>
+            <div class="content">
+                <p style="text-align: center; margin: 20px 0;"><strong>Every belt advancement is recognized with:</strong></p>
+                <ul>
+                    <li>A <strong>custom Peccy pin</strong> - one unique design per belt level</li>
+                    <li>Public recognition at a <strong>quarterly belt ceremony</strong> - mentees participate alongside their mentor</li>
+                    <li>Visibility on the <strong>SENSEI Scoreboard</strong> in the operations cube</li>
+                    <li><strong>Career priority:</strong> Belt level carries weight for promotions, special projects, and advanced training opportunities</li>
+                </ul>
+                
+                <p style="background: rgba(255, 215, 0, 0.2); padding: 20px; border-radius: 10px; border: 2px solid #FFD700; margin-top: 30px; text-align: center;">
+                    <strong>A note on the Black Belt pin:</strong> The first leader to earn Black Belt at PHX6 will design their own Peccy pin - a permanent part of the SENSEI program's history and a symbol of what it means to reach the highest standard.
+                </p>
+            </div>
+            <div class="belt-row">
+                <span>⬜</span><span>🟨</span><span>🟧</span><span>🟩</span>
+                <span>🟦</span><span>🟪</span><span>🟫</span><span>⬛</span>
+            </div>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="slide">
+            <h2>Program Timeline</h2>
+            <div class="subtitle">How We Launch</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Timeline</th>
+                        <th>Milestone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Program Announcement</td><td>Week 1</td><td>Pre-shift communication; one-pagers distributed; dashboard access provisioned</td></tr>
+                    <tr><td>Baseline Assessment</td><td>Weeks 1-2</td><td>All eligible leaders' current process hours and metrics established</td></tr>
+                    <tr><td>First Qualifying Shifts</td><td>Week 1+</td><td>Leaders begin accumulating hours immediately</td></tr>
+                    <tr><td>First White Belt Cohort</td><td>~Weeks 2-3</td><td>First Peccy pins awarded; scoreboard goes live</td></tr>
+                    <tr><td>First Quarterly Ceremony</td><td>Month 3</td><td>Public recognition event; first multi-belt cohort recognized</td></tr>
+                    <tr><td>Phase 2 Assessment Ownership</td><td>Month 7</td><td>First Brown Belt graduates begin co-administering assessments</td></tr>
+                    <tr><td>First Black Belt Candidate</td><td>Month 12-18</td><td>First live TPH presentation; first custom pin designed</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Slide 15 -->
+        <div class="slide">
+            <h2>The Standard Is You</h2>
+            <div class="content">
+                <p style="text-align: center; font-size: 24px; margin: 30px 0;"><strong>SENSEI is not a program. It is a culture.</strong></p>
+                
+                <p style="text-align: center; font-size: 18px; margin: 20px 0;">Every White Belt who earns their first pin is proof that performance is recognized here.</p>
+                <p style="text-align: center; font-size: 18px; margin: 20px 0;">Every Green Belt who passes their assessment is proof that knowledge matters here.</p>
+                <p style="text-align: center; font-size: 18px; margin: 20px 0;">Every Black Belt who designs their pin is proof that excellence has a name - and it is yours.</p>
+                
+                <p style="text-align: center; font-size: 42px; color: #FFD700; margin: 40px 0; font-weight: bold;">250 hours. 8 levels. One standard.</p>
+                
+                <p style="text-align: center; font-size: 28px; font-style: italic; color: #FFA500; margin: 30px 0;">The belt does not make the leader. The leader makes the belt.</p>
+            </div>
+            <div class="belt-row">
+                <span>⬜</span><span>🟨</span><span>🟧</span><span>🟩</span>
+                <span>🟦</span><span>🟪</span><span>🟫</span><span>⬛</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <button onclick="prevSlide()">◀ Previous</button>
+        <span class="counter"><span id="current">1</span> / 15</span>
+        <button onclick="nextSlide()">Next ▶</button>
+    </div>
+
+    <script>
+        let current = 0;
+        const slides = document.querySelectorAll('.slide');
+        const total = slides.length;
+
+        function showSlide(n) {
+            slides[current].classList.remove('active');
+            current = (n + total) % total;
+            slides[current].classList.add('active');
+            document.getElementById('current').textContent = current + 1;
+            
+            document.querySelectorAll('button')[0].disabled = current === 0;
+            document.querySelectorAll('button')[1].disabled = current === total - 1;
+        }
+
+        function nextSlide() {
+            if (current < total - 1) showSlide(current + 1);
+        }
+
+        function prevSlide() {
+            if (current > 0) showSlide(current - 1);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        showSlide(0);
+    </script>
+</body>
+</html>
