@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSEI Rankings Dashboard</title>
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo-section">
+                <div class="ninja-icon">🥷</div>
+                <div class="title-group">
+                    <h1 class="main-title">SENSEI</h1>
+                    <p class="subtitle">Sustaining Excellence through Networked Skills, Education & Impact</p>
+                </div>
+            </div>
+            <div class="site-badge">PHX6</div>
+            <a href="index.html" class="nav-link" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 10px 20px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; font-size: 14px; transition: all 0.3s ease;">📊 View Presentation</a>
+        </header>
+
+        <div class="belt-legend">
+            <div class="belt-item" data-belt="white">⬜ White</div>
+            <div class="belt-item" data-belt="yellow">🟨 Yellow</div>
+            <div class="belt-item" data-belt="orange">🟧 Orange</div>
+            <div class="belt-item" data-belt="green">🟩 Green</div>
+            <div class="belt-item" data-belt="blue">🟦 Blue</div>
+            <div class="belt-item" data-belt="purple">🟪 Purple</div>
+            <div class="belt-item" data-belt="brown">🟫 Brown</div>
+            <div class="belt-item" data-belt="black">⬛ Black</div>
+        </div>
+
+        <div class="rankings-container">
+            <div class="rankings-header">
+                <h2>🏆 Current Rankings</h2>
+                <div class="live-indicator">
+                    <span class="pulse-dot"></span>
+                    LIVE
+                </div>
+            </div>
+
+            <div class="leaderboard" id="leaderboard">
+                <!-- Rankings will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-value" id="totalParticipants">0</div>
+                <div class="stat-label">Active Participants</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⬛</div>
+                <div class="stat-value" id="blackBelts">0</div>
+                <div class="stat-label">Black Belts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-value" id="avgUPH">0</div>
+                <div class="stat-label">Avg UPH</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-value" id="qualityRate">0%</div>
+                <div class="stat-label">Quality Rate</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard-script.js"></script>
+</body>
+</html>
