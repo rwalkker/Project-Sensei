@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENSEI - The Kaizen Belt Leadership Development Program</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="presentation-container">
+        <!-- Slides will be loaded here -->
+        <div id="slides-container"></div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-btn prev-btn" onclick="previousSlide()">◀ Previous</button>
+            <span class="slide-counter"><span id="currentSlide">1</span> / <span id="totalSlides">15</span></span>
+            <button class="nav-btn next-btn" onclick="nextSlide()">Next ▶</button>
+        </div>
+        
+        <div class="slide-indicator" id="slideIndicator"></div>
+    </div>
+
+    <script src="slides-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
